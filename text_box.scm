@@ -2,12 +2,18 @@
 
 (let*
 	(
+		(pastedlayer (car (gimp-image-get-layer-by-name image "Pasted Layer")))
 		;(myimage (car (gimp-image-new 100 100 RGB)))
-		(mylayer (car (gimp-layer-new image 50 50 RGB-IMAGE "background" 50  1)))
+		;(mylayer (car (gimp-layer-new image 200 200 RGB-IMAGE "background" 100  1)))
+		;(activedrawable (car (gimp-image-get-active-drawable image)))
 		;(textlayer (car (gimp-text-layer-new myimage inText inFont inFontSize UNIT-PIXEL)))
 	)	
 	;(gimp-item-transform-scale image 0 0 100 100)
-	(gimp-image-insert-layer image mylayer 0 -1)
+	;(gimp-image-insert-layer image mylayer 0 -1)
+	(gimp-layer-scale pastedlayer 480 640 TRUE)
+	(gimp-image-resize-to-layers image)
+	;(gimp-image-scale image 480 640)
+;	(gimp-item-transform-scale activedrawable 0 0 100 100)
 	;(gimp-image-insert-layer myimage textlayer 0 -1)
 	;(gimp-display-new myimage)
 )
