@@ -3,7 +3,10 @@
 (let*
 (
 	(myimage (car (gimp-image-new 100 100 RGB)))
+	;(mylayer (car (gimp-layer-new myimage 50 50 RGB "background" 100  LAYER-MODE-NORMAL-LEGACY)))
+	(mylayer (car (gimp-layer-new myimage 50 50 RGB-IMAGE "background" 50  1)))
 )	
+(gimp-image-insert-layer myimage mylayer 0 -1)
 (gimp-display-new myimage)
 )
 
