@@ -4,8 +4,8 @@
 	(
 		(pastedlayer (car (gimp-image-get-layer-by-name image "Pasted Layer")))
 		;(myimage (car (gimp-image-new 100 100 RGB)))
-		(calloutlayer (car (gimp-layer-new image 480 640 RGB-IMAGE "callout" 0  1)))
-		(balloonlayer (car (gimp-layer-new image 480 640 RGB-IMAGE "balloon" 0  1)))
+		(calloutlayer (car (gimp-layer-new image 480 640 RGBA-IMAGE "callout" 0  1)))
+		(balloonlayer (car (gimp-layer-new image 480 640 RGBA-IMAGE "balloon" 0  1)))
 		;(activedrawable (car (gimp-image-get-active-drawable image)))
 		(textlayer (car (gimp-text-layer-new image inText inFont inFontSize UNIT-PIXEL)))
 	)	
@@ -19,9 +19,9 @@
 	(gimp-layer-scale pastedlayer 480 640 1)
 	;(gimp-image-scale image 480 640)
 ;	(gimp-item-transform-scale activedrawable 0 0 100 100)
-	(gimp-image-insert-layer image textlayer 0 -1)
-	(gimp-image-insert-layer image calloutlayer 0 -1)
 	(gimp-image-insert-layer image balloonlayer 0 -1)
+	(gimp-image-insert-layer image calloutlayer 0 -1)
+	(gimp-image-insert-layer image textlayer 0 -1)
 	;(gimp-display-new myimage)
 )
 
