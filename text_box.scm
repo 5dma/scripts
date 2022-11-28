@@ -8,6 +8,7 @@
 		(balloonlayer (car (gimp-layer-new image 480 640 RGBA-IMAGE "balloon" 0  1)))
 		;(activedrawable (car (gimp-image-get-active-drawable image)))
 		(textlayer (car (gimp-text-layer-new image inText inFont inFontSize UNIT-PIXEL)))
+		(balloonstem (car (gimp-vectors-new image "Balloon stem")))
 	)	
 	(gimp-context-set-foreground '(0 0 0))
 	(gimp-context-set-background '(246 244 192))
@@ -22,6 +23,10 @@
 	(gimp-image-insert-layer image balloonlayer 0 -1)
 	(gimp-image-insert-layer image calloutlayer 0 -1)
 	(gimp-image-insert-layer image textlayer 0 -1)
+	(gimp-vectors-stroke-new-from-points balloonstem 0 6  #(100 100 100 100 100 100 200 200 200 200 200 200 300 300 300 300 300 300) 0)
+	;(gimp-vectors-stroke-new-from-points balloonstem 0 6  #(100 100 200 200 300 300) 0)
+	(gimp-item-set-visible balloonstem 1)
+	(gimp-image-insert-vectors image balloonstem 0 -1)
 	;(gimp-display-new myimage)
 )
 
