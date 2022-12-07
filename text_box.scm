@@ -4,8 +4,8 @@
 	(
 		(pastedlayer (car (gimp-image-get-layer-by-name image "Pasted Layer")))
 		;(myimage (car (gimp-image-new 100 100 RGB)))
-		(calloutlayer (car (gimp-layer-new image 480 640 RGBA-IMAGE "callout" 0  1)))
-		(balloonlayer (car (gimp-layer-new image 480 640 RGBA-IMAGE "balloon" 0  1)))
+		(calloutlayer (car (gimp-layer-new image 480 640 RGBA-IMAGE "callout" 100.0  1)))
+		(balloonlayer (car (gimp-layer-new image 480 640 RGBA-IMAGE "balloon" 100.0  1)))
 		;(activedrawable (car (gimp-image-get-active-drawable image)))
 		(textlayer (car (gimp-text-layer-new image inText inFont inFontSize UNIT-PIXEL)))
 		(balloonstem (car (gimp-vectors-new image "Balloon stem")))
