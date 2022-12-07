@@ -1,4 +1,4 @@
-(define (script-fu-text-box image drawable inText inFont inFontSize inTextColor)
+(define (script-fu-text-box image drawable inText inFont inFontSize)
 
 (let*
 	(
@@ -51,6 +51,5 @@
     SF-FONT        "Font"          "DejaVu Sans Bold"    ;a font variable
     SF-ADJUSTMENT  "Font size"     '(39 1 1000 1 10 0 1)
                                                 ;a spin-button
-    SF-COLOR       "Color"         '(0 0 0)     ;color variable
   )
 (script-fu-menu-register "script-fu-text-box" "<Image>/Image/Itai/Meme")
