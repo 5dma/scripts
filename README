@@ -1,4 +1,3 @@
-# scripts
-Custom GIMP Script-Fus.
+# Custom GIMP Script-Fus
 
 * text_box.scm -- Creates layers to draw a meme on top of an image
