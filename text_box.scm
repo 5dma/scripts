@@ -23,8 +23,8 @@
 	(gimp-image-insert-layer image balloonlayer 0 -1)
 	(gimp-image-insert-layer image calloutlayer 0 -1)
 	(gimp-image-insert-layer image textlayer 0 -1)
-	(gimp-vectors-stroke-new-from-points balloonstem 0 6  #(100 100 100 100 100 100 200 200 200 200 200 200 300 300 300 300 300 300) 0)
-	;(gimp-vectors-stroke-new-from-points balloonstem 0 6  #(100 100 200 200 300 300) 0)
+	(gimp-vectors-stroke-new-from-points balloonstem VECTORS-STROKE-TYPE-BEZIER 18  #(50 50 100 100 110 110 110 110 200 200 250 250 250 250 300 300 350 350) 0)
+
 	(gimp-item-set-visible balloonstem 1)
 	(gimp-image-insert-vectors image balloonstem 0 -1)
 	;(gimp-display-new myimage)
